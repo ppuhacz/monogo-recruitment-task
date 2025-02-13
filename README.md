@@ -1,38 +1,47 @@
-# sv
+# Monogo Recruitment Task
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Instrukcja uruchomienia projektu
 
-## Creating a project
+1. Sklonuj repozytorium:
 
-If you're seeing this, you've probably already done this step. Congrats!
+   ```bash
+   git clone https://github.com/ppuhacz/monogo-recruitment-task.git
+   cd monogo-recruitment-task
+   ```
 
-```bash
-# create a new project in the current directory
-npx sv create
+2. Zainstaluj zależności:
 
-# create a new project in my-app
-npx sv create my-app
-```
+   ```bash
+   pnpm install
+   ```
 
-## Developing
+3. Uruchom projekt:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+   ```bash
+   pnpm run dev
+   ```
 
-```bash
-npm run dev
+4. Otwórz przeglądarkę i przejdź do `http://localhost:5173`.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Technologia
 
-## Building
+Projekt został zbudowany przy użyciu następujących technologii:
 
-To create a production version of your app:
+- **Svelte / SvelteKit**
+- **TypeScript**
+- **Vite**
+- **Jest**
+- **Hugging Face API**
+- **prettier**
+- **eslint**
+- **pnpm**
 
-```bash
-npm run build
-```
+## Analiza wyzwań
 
-You can preview the production build with `npm run preview`.
+Podczas realizacji zadania napotkałem kilka wyzwań:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+1. **Integracja z API Hugging Face**: Konieczność obsługi różnych typów odpowiedzi z API, w tym błędów serwera i poprawnych wyników analizy sentymentu.
+2. **Typowanie w TypeScript**: Zapewnienie poprawnego typowania dla danych wejściowych i wyjściowych z API, co wymagało zdefiniowania odpowiednich typów, różnych dla poprawnego zapytania i erroru.
+3. **Obsługa błędów**: Implementacja mechanizmów obsługi błędów, aby użytkownik był informowany o problemach z serwerem lub niepoprawnych danych wejściowych.
+
+Pomimo tych wyzwań, udało się zrealizować zadanie i stworzyć funkcjonalną aplikację do analizy sentymentu tekstu.
